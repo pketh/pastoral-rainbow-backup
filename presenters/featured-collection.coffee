@@ -1,4 +1,4 @@
-FeaturedProjectTemplate = require "../templates/includes/featured-project"
+FeaturedCollectionTemplate = require "../templates/includes/featured-collection"
 
 module.exports = (application, collection) ->
   self =
@@ -13,4 +13,4 @@ module.exports = (application, collection) ->
     link: ->
       collection.link
       
-  return FeaturedProjectTemplate self
+  return FeaturedCollectionTemplate self

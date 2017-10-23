@@ -3,7 +3,7 @@ LayoutPresenter = require "../layout"
 WhatIsGlitchPresenter = require "../what-is-glitch"
 CtaButtonsPresenter = require "../cta-buttons"
 HeaderPresenter = require "../header"
-FeaturedProjectPresenter = require "../featured-project"
+FeaturedCollectionPresenter = require "../featured-collection"
 
 module.exports = (application) ->
   console.log "Presented index"
@@ -28,9 +28,9 @@ module.exports = (application) ->
 #     featuredProjects: ->
 #       application.featuredProjects()
       
-    featuredProjects: ->
+    featuredCollections: ->
       application.featuredCollections.map (collection) ->
-        FeaturedProjectPresenter application, collection
+        FeaturedCollectionPresenter application, collection
 
     randomCategories: ->
       application.categories().filter (category) ->
