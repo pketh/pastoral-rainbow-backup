@@ -29,8 +29,8 @@ module.exports = (application) ->
 #       application.featuredProjects()
       
     featuredProjects: ->
-      application.featuredProjects().map (project) ->
-        FeaturedProjectPresenter application, project
+      application.featuredCollections.map (collection) ->
+        FeaturedProjectPresenter application, collection
 
     randomCategories: ->
       application.categories().filter (category) ->

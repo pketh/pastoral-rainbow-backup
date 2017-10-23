@@ -1,32 +1,16 @@
 FeaturedProjectTemplate = require "../templates/includes/featured-project"
 
-module.exports = (application, project) ->
+module.exports = (application, collection) ->
   self =
-    project: project
+    collection: collection
 
-    projectName: ->
-      project.displayName()
+    title: ->
+      collection.title
     
     src: ->
-      project.img()
-    
-    projectHasLink: ->
-      true if project.hasOwnProperty('link')
-    
-    url: ->
-      if self.projectHasLink()
-        project.link()
-      else
-        project.domain()
-
-    showProjectOverlay: (event) ->
-      event.preventDefault()
-      event.stopPropagation()
-      application.getProjects [project.I]
-      project.showOverlay application
-
-    click: (event) ->
-      unless self.projectHasLink()
-        self.showProjectOverlay event
+      collection.img
+        
+    link: ->
+      collection.link
       
   return FeaturedProjectTemplate self

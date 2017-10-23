@@ -175,7 +175,7 @@ module.exports = (application, teamOrProject) ->
             showgrid: true
             autorange: false
             fixedrange: true         
-            tickangle: 1e-10 # to have it aligned to the right of the tick          xaxis:
+            #tickangle: 1e-10 # to have it aligned to the right of the tick          xaxis:
             range: [data.x[0].getTime() - 3600000, data.x[data.x.length-1].getTime() + 4 * 3600000]
           yaxis:
             fixedrange: true
